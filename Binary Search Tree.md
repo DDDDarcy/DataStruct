@@ -45,14 +45,14 @@ Tree InsertTree(Tree t,int& n)
     t->data = n;
     t->left = NULL;
     t->right = NULL;
-    return t;
  }
  if(t)        //若结点存在则判断大小，指引n应该往左还是右子树前进。
     if(t->data > n)       // n比结点数小，往左走,并且如果创建了新结点会返回给左子树
       t->left = InsertTree(t->left,n);
     else
       t->right = InsertTree(t->right,n);   // n比结点数大，往右走，并且如果创建了新结点会返回给右子树
- return;
+      
+ return t;//返回当前节点
 }
 ```
 
