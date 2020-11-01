@@ -45,8 +45,8 @@ Tree InsertTree(Tree t,int& n)
     t->data = n;
     t->left = NULL;
     t->right = NULL;
- }
- if(t)        //若结点存在则判断大小，指引n应该往左还是右子树前进。
+  }
+  if(t)        //若结点存在则判断大小，指引n应该往左还是右子树前进。
     if(t->data > n)       // n比结点数小，往左走,并且如果创建了新结点会返回给左子树
       t->left = InsertTree(t->left,n);
     else
